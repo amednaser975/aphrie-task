@@ -1,0 +1,499 @@
+// * {
+//     box-sizing: content-box;
+// }
+// Start Navbar
+.navbar-brand {
+    font-size: 1.8rem;
+}
+.active a {
+    color: #0078ff !important;
+}
+.nav-link {
+    font-size: 1.2rem;
+    color: #0056b3 !important;
+}
+// Start Home Section
+#home {
+    background-image: url(../../assets/images/intro-bg.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    h1 {
+        font-size: 4rem;
+        color: #fff;
+
+        span {
+            color: #09c;
+            display: block;
+            text-decoration: underline;
+        }
+    }
+    .btns a {
+        font-size: 1.3rem;
+        padding: .5rem 2rem;
+        margin-right: 1.5rem;
+        border-radius: 25px;
+    }
+    .back-to-top {
+        position: fixed;
+        display: none;
+        background: #0078ff;
+        color: #fff;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 2.5;
+        font-size: 16px;
+        border-radius: 50%;
+        right: 15px;
+        bottom: 15px;
+        transition: all 0.5s ease;
+        z-index: 11;
+    }
+}
+@media screen and (max-width: 992px) {
+    #home {
+
+        margin-top: 3rem;
+        background-size: auto;
+    
+        h1 {
+            font-size: 2.5rem;
+        }
+        .home-img {
+            order: 1;
+            margin-bottom: 1rem;
+        }
+        .home-caption {
+            order: 2;
+        }
+        .btns {
+            text-align: center;
+            a {
+            margin: .6rem auto;
+            }
+        }
+    }
+}
+// Start About Us Section
+#about-us {
+    .about-head, .choose-us {
+        
+        h3 {
+            font-size: 2.5rem;
+            
+        }
+        p {
+            font-size: 1rem !important;
+        }
+
+    }
+    .about-head {
+        width: 50%;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 1rem;
+        i {
+            font-size: 1.4rem;
+            color: #09c;
+            border: 1px solid #09c;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            padding: 1rem;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #09c;
+                color: #fff;
+            }
+        } 
+        p {
+            font-size: 1rem;
+        }
+    }
+    .bolded-p {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    .normal-p {
+        font-size: 1.1rem;
+    }
+    .choose-us {
+        background-color: #254a99;
+        padding: 3rem;
+        color: #FFF;
+
+        h3 {
+            font-weight: 400;
+        }
+        .item {
+            background-color: #22458f ;
+            padding: 1rem;
+            text-align: center;
+            border-radius: .5rem;
+
+            i {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: #bfddfe;
+                font-size: .9rem !important;
+            }
+            h5 {
+                font-size: 1rem !important;
+            }
+        }
+        
+        .records {
+            h4 {
+                font-weight: 600;
+                font-size: 2rem;
+            }
+            p {
+                font-size: .7rem !important;
+                font-weight: 300 !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    #about-us {
+        .about-head, .choose-us {
+            
+            width: 100%;
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem !important;
+            }
+    
+        }
+        .about-img {
+            order: 1;
+        }
+        .about-caption {
+            order: 2;
+        }
+        .choose-us {
+            .item {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+// Start Portfolio Section
+#portfolio {
+    .port-category {
+        padding: .5rem 1.5rem;
+        background-color: #d3eaf3;
+        color: #09c;
+        list-style: none;
+        display: inline-block;
+        cursor: pointer;
+        margin: .7rem;
+        border-radius: 2rem;
+        transition: all .5s ease;
+
+        &:hover {
+            background-color: #09c;
+            color: #FFF;
+        }
+        &.active {
+            background-color: #09c;
+            color: #FFF;
+        }
+    }
+    .port-item {
+        border: 0;
+        margin-bottom: 1rem;
+        img {
+            cursor: pointer;
+            border-radius: .7rem;
+        }
+        .layer {
+            bottom: 0;
+            right: 0;
+            height: 0;
+            width: 100%;
+            border-radius: .7rem;
+            background-color: rgba($color: #09c, $alpha: .3);
+            transition: all .5s ease;
+            overflow: hidden;
+            p {
+                display: none;
+            }
+            li {
+                cursor: pointer;
+                background-color: #427bff;
+                border: 1px solid #427bff;
+                color: #FFF;
+                font-size: 1rem;
+                width: 40px;
+                height: 40px;
+                display: none;
+                border-radius: 50%;
+                line-height: 5px;
+                text-align: center;
+                transition: all .5s ease;
+                padding: 10px 0;
+                &:hover {
+                    background-color: #FFF;
+                    color: #427bff;
+                }
+            }
+        }
+        
+        &:hover .layer {
+            height: 100%;
+            p {
+                display: block;
+            }
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) { 
+
+    #portfolio {
+        .port-category {
+            padding: .5rem 1rem;
+            margin: .3rem;
+        }
+    }
+}
+// Start Testimonials Section
+#testimonials {
+    background-color: #d3eaf3;
+    box-shadow: 2px 2px 15px 10px #dee2e6 inset;
+    padding: 3rem;
+    .testimonials-head {
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
+    .testi-item {
+        img {
+            border: 2px solid #fff;
+        }
+        h5 {
+            font-size: .8rem;
+        }
+        p {
+            font-style: italic;
+        }
+    }
+    .carousel-indicators li {
+        width: 15px;
+        height: 15px;
+        background-color: #427bff;
+        border-radius: 50%;
+    }
+}
+@media screen and (max-width: 992px) { 
+
+    #testimonials {
+        padding: 1rem;
+        text-align: center;
+        .testimonials-head {
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+// Start Team Section 
+#team {
+    
+    .team-head {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 992px) { 
+    #team {
+        .team-head {
+            width: 100%;
+        }
+        .col-md-3 {
+            margin-bottom: 1rem;
+        }
+    }
+}
+// Start Clients Section
+#clients {
+    background-color: #d3eaf3;
+    box-shadow: 2px 2px 15px 10px #dee2e6 inset;
+
+    .clients-head {
+        width: 50%;
+    }
+    .col-md-3 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .img-container {
+        padding: 1rem;
+        background-color: #FFF;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #bfddfe;
+    }
+}
+@media screen and (max-width: 992px) { 
+    #clients {
+        .clients-head {
+            width: 100%;
+        }
+        .img-container {
+            margin-bottom: 1rem;
+        }
+    }
+}
+// Start Contact Us Section
+#contact-us {
+
+    .map {
+        width: 100%;
+        height: 100%;
+        iframe {
+            width: 100%;
+            height: 90%;
+        }
+    }
+    .envolp {
+        text-align: center;
+    }
+    i {
+        color: #427bff;
+        margin-right: .5rem;
+    }
+    input, textarea {
+        margin-bottom: 1rem;
+    }
+    button {
+        font-size: 1.3rem;
+        padding: .4rem 2rem;
+        margin-right: 1.5rem;
+        border-radius: 25px;
+    }
+}
+@media screen and (max-width: 992px) { 
+    #contact-us {
+        .envolp {
+            text-align: start;
+        }
+    }
+}
+// Start Footer 
+footer {
+    .upper-footer {
+        background-color: #254a99;
+        padding: 3rem;
+        color: #FFF;
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 1.8;
+            font-weight: lighter;
+            color: #ddd;
+        }
+        h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.3rem;
+        }
+        .links li {
+            font-weight: 400;
+            color: #ddd;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover {
+                color: #427bff;
+            }
+        }
+        .info li {
+            font-weight: 400;
+            color: #ddd;
+            span {
+                font-weight: bold;
+            }
+        }
+        .icons {
+            margin-bottom: 2rem;
+            li {
+                color: #FFF;
+                background-color: #427bff;
+                border: 1px solid #427bff;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                padding: .6rem;
+                text-align: center;
+                transition: all .4s ease;
+                cursor: pointer;
+                &:hover {
+                    color: #427bff;
+                    background-color: #FFF;
+                }
+            }
+        }
+        .custom-p {
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+    }
+    .lower-footer {
+        color: #FFF;
+        background-color: #22458f;
+        width: 100%;
+        line-height: 2.2;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+@media screen and (max-width: 992px) { 
+    footer {
+        .upper-footer {
+
+            padding: 2rem .7rem;
+            h3 {
+                font-size: 2rem;
+                font-weight: 300;
+                letter-spacing: 4px;
+                margin-bottom: .6rem;
+            }
+            p {
+                line-height: 1.6;
+            }
+            h4 {
+                font-size: 1rem;
+                margin-bottom: .5rem;
+            }
+            .links li {
+                line-height: 1.3;
+            }
+            }
+            .icons {
+                margin-bottom: 1rem;
+            }
+            .custom-p {
+                line-height: 1.3;
+            }
+        }
+    }
